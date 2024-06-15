@@ -7,7 +7,9 @@ fn main() {
     let number = rand::thread_rng().gen_range(1..=100);
     loop {
     println!("Please input your guess");
-
+    let str = String::from("Hello");
+    change(str);
+    //println!("{}",str);
     let mut guess = String::new();
     io::stdin()
         .read_line(&mut guess)
@@ -28,4 +30,9 @@ fn main() {
     }
     }
 
+}
+
+fn change(mut str : String){
+    str.push_str("world");
+    println!("{}",str);
 }
